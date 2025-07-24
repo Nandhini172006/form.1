@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 10px;
-    }
-    input {
-      width: 100%;
-      margin: 5px 0;
-      padding: 8px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      margin-top: 10px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competition Registration</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="members">
-  Group Member 1:<br><input type="text" name="member[]"><br>
-</div>
+  <div class="form-container">
+    <h1>Competition Registration</h1>
+    
+    <form id="registrationForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
 
-<button onclick="addMember()">Add Member</button>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
 
-<script>
-  let i = 1;
-  function addMember() {
-    if (i >= 5) return alert("Max 5 members");
-    i++;
-    members.innerHTML += `Group Member ${i}:<br><input type="text" name="member[]"><br>`;
-  }
-</script>
+      <label>Gender:</label>
+      <div class="gender-options">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
 
+      <label for="groupMember">Add Group Member:</label>
+      <input type="text" id="groupMember" placeholder="Enter member name">
+      <button type="button" onclick="addMember()">Add Member</button>
+
+      <ul id="memberList"></ul>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
