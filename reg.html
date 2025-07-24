@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+    }
+    input {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="members">
+  Group Member 1:<br><input type="text" name="member[]"><br>
+</div>
+
+<button onclick="addMember()">Add Member</button>
+
+<script>
+  let i = 1;
+  function addMember() {
+    if (i >= 5) return alert("Max 5 members");
+    i++;
+    members.innerHTML += `Group Member ${i}:<br><input type="text" name="member[]"><br>`;
+  }
+</script>
+
+</body>
+</html>
