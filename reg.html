@@ -1,40 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Competition Registration</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: yellow;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 10px 5px;
+      vertical-align: top;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-
-  <div class="form-container">
-    <h1>Competition Registration</h1>
-    
-    <form id="registrationForm">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label>Gender:</label>
-      <div class="gender-options">
-        <label><input type="radio" name="gender" value="Male" required> Male</label>
-        <label><input type="radio" name="gender" value="Female"> Female</label>
-        <label><input type="radio" name="gender" value="Other"> Other</label>
-      </div>
-
-      <label for="groupMember">Add Group Member:</label>
-      <input type="text" id="groupMember" placeholder="Enter member name">
-      <button type="button" onclick="addMember()">Add Member</button>
-
-      <ul id="memberList"></ul>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <script src="script.js"></script>
+  <form>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name=""></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="Gender"> Male
+          <input type="radio" name="Gender"> Female
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" placeholder="Email" name=""></td>
+      </tr>
+      <tr>
+        <td>Competition category:</td>
+        <td>
+          <select>
+            <option>dancing</option>
+            <option>singing</option>
+            <option>drawing</option>
+            <option>acting</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Phone number:</td>
+        <td><input type="tel" placeholder="Phone number" name=""></td>
+      </tr>
+      <tr>
+        <td>Date of birth:</td>
+        <td><input type="date" name=""></td>
+      </tr>
+      <tr>
+        <td>Group:</td>
+        <td>
+          <input type="checkbox" name="group"> Group
+          <input type="checkbox" name="group"> Individual
+        </td>
+      </tr>
+      <tr>
+        <td>If group, group name:</td>
+        <td><input type="text" name="" placeholder="Enter group name"></td>
+      </tr>
+      <tr>
+        <td>Group member details:</td>
+        <td>
+          <input type="text" placeholder="Member 1 name"><br><br>
+          <input type="text" placeholder="Member 2 name"><br><br>
+          <input type="text" placeholder="Member 3 name"><br><br>
+          <input type="text" placeholder="Member 4 name"><br><br>
+          <input type="text" placeholder="Member 5 name">
+        </td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><textarea rows="4" cols="50" placeholder="Enter your address"></textarea></td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td><input type="number" min="1" max="100" placeholder="Enter your age"></td>
+      </tr>
+      <tr>
+        <td>Father details:</td>
+        <td>
+          <input type="text" placeholder="Father name"><br><br>
+          <input type="text" placeholder="Father phone number"><br><br>
+          <input type="email" placeholder="Father email">
+        </td>
+      </tr>
+      <tr>
+        <td>Mother details:</td>
+        <td>
+          <input type="text" placeholder="Mother name"><br><br>
+          <input type="text" placeholder="Mother phone number"><br><br>
+          <input type="email" placeholder="Mother email">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <input type="submit" value="Submit">
+        </td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>
