@@ -5,67 +5,7 @@
     <meta charset="UTF-8" />
     <title>Compitition registration
     <link rel="stylesheet" href="style.css">
-    <style>
-    body {
-      background-color: yellow;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-    }
-
-    form {
-      background-color: white;
-      padding: 20px 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 600px;
-    }
-
-    table {
-      width: 100%;
-    }
-
-    td {
-      padding: 10px 5px;
-      vertical-align: top;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="number"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-sizing: border-box;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-     
-     </style>
+    
 
         
     </title>
@@ -139,12 +79,20 @@
               </tr>
               <tr>
                 <td>
-                  If group, Enter group name:
-                  </td>
-                  <td>
-                  <input type="text" name="" placeholder="Enter group name">
-                 </td>
-            </tr>
+                <div id="members">
+  Group Member 1: <input type="text" name="member[]"><br>
+</div>
+
+<button onclick="addMember()">Add Member</button>
+
+<script>
+  let i = 1;
+  function addMember() {
+    if (i >= 5) return alert("Max 5 members");
+    i++;
+    members.innerHTML += `Group Member ${i}: <input type="text" name="member[]"><br>`;
+  }
+</script>
             <tr>
                 <td>
                    group memeber details:
