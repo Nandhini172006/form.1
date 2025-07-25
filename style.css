@@ -1,5 +1,7 @@
 body {
-  background-color: #f2f2f2;
+   background-image :url("Fimage.JPEG");
+      background-repeat: no repeat;
+      background-size: cover;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
